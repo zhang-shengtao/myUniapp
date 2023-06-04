@@ -1,0 +1,62 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarBackgroundColor": "#fff",
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/address_book/address_book",
+			"style": {
+				"navigationBarTitleText": "通讯录",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"tabBar": {
+		"selectedColor": "#13bdd4",
+		"height": "60px",
+		"spacing": "5px",
+		"backgroundColor": "#F8F8F8",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "消息",
+				"iconPath": "static/Messages1.png",
+				"selectedIconPath": "static/Messages.png"
+			},
+			{
+				"pagePath": "pages/address_book/address_book",
+				"text": "通讯录",
+				"iconPath": "static/book1.png",
+				"selectedIconPath": "static/book.png"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "static/my1.png",
+				"selectedIconPath": "static/my.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarBackgroundColor": "#f7f7f7",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "加载中...",
+		"backgroundColor": "#f7f7f7",
+		// "enablePullDownRefresh": true,
+		"transparentTitle": "auto",
+		"app-plus": {
+			"scrollIndicator": "none"
+		}
+	},
+	"uniIdRouter": {}
+}
