@@ -2,13 +2,15 @@
   "pages": [
     "pages/index/index",
     "pages/my/my",
-    "pages/address_book/address_book"
+    "pages/address_book/address_book",
+    "pages/login/login",
+    "pages/chat/chat"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#f7f7f7",
+    "navigationBarBackgroundColor": "#ededed",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "加载中...",
-    "backgroundColor": "#f7f7f7",
+    "backgroundColor": "#ededed",
     "transparentTitle": "auto"
   },
   "tabBar": {

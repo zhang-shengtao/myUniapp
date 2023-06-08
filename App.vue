@@ -1,24 +1,39 @@
-<script>
+<script setup>
+	import uniApi from '@/utils/uniApi.js'
 	import user_pinia from "@/pinia/user.js"
-	export default {
-		onLaunch: function(options) {
-			uni.onNetworkStatusChange(function(res) {
-				console.log(res);
-				user_pinia().$patch({
-					isConnected: res.isConnected
-				})
-			});
-		},
-		onShow: function(options) {
+	onLaunch((options) => {
+		uniApi.networkStatusChange()
+		// const newUser = user_pinia()
+		// if (!newUser.token) {
+		// 	uni.reLaunch({
+		// 		url: '/pages/login/login'
+		// 	})
+		// }
 
-		},
-		onHide: function(options) {
+	})
 
-		}
-	}
+	onShow((options) => {
+		// const newUser = user_pinia()
+		// if (!newUser.token) {
+		// 	uni.reLaunch({
+		// 		url: '/pages/login/login'
+		// 	})
+		// }
+	})
+
+
+	onHide(() => {
+		// console.log('onHide');
+	})
+
+	onThemeChange((options) => {
+		// console.log('onThemeChange', options);
+	})
 </script>
 
 <style lang="scss">
+	@import './static/my_icon.scss';
+
 	.flex {
 		display: flex;
 		align-items: center;

@@ -1,0 +1,22 @@
+{
+	"name": "myuniapp",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zhang-shengtao/myUniapp.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/zhang-shengtao/myUniapp/issues"
+	},
+	"homepage": "https://github.com/zhang-shengtao/myUniapp#readme",
+	"devDependencies": {
+		"unplugin-auto-import": "^0.16.4"
+	}
+}
