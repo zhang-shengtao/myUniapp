@@ -9,10 +9,11 @@
 			</view>
 		</view>
 	</view>
-	<view :class="['flex','list_item',i+1==list.length&&'top20']" v-for="(item,i) in list" :key="item.icon">
+	<navigator :url="item.url" :class="['flex','list_item',i+1==list.length&&'top20']" v-for="(item,i) in list"
+		:key="item.icon">
 		<view class="flex item"> <text :class="['my-icon',item.icon,'item_icon']" /> {{item.text}}</view>
 		<text class="my-icon my-right" />
-	</view>
+	</navigator>
 </template>
 
 <script setup>
@@ -33,21 +34,13 @@
 		},
 		{
 			icon: "my-gear",
-			url: '',
+			url: '/pages/setting/index',
 			text: '设置'
 		}
 	]
-
-	onReady(() => {
-
-	})
 </script>
 
 <style lang="scss">
-	page {
-		background-color: #ededed;
-	}
-
 	.header {
 		padding: 20rpx 30rpx;
 		box-sizing: border-box;
@@ -77,8 +70,6 @@
 			border-radius: 10rpx;
 		}
 	}
-
-
 
 	.list_item {
 		padding: 30rpx;

@@ -52,6 +52,51 @@
 			"path": "pages/chat/chat",
 			"style": {
 				"navigationBarTitleText": "聊天列表",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue64e",
+							"fontSize": "30",
+							"float": "right",
+							"fontSrc": "/static/uni_icon.ttf"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/chat/message/message",
+			"style": {
+				"navigationBarTitleText": "聊天信息",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/add_user/add_user",
+			"style": {
+				"navigationBarTitleText": "添加朋友",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/group/group",
+			"style": {
+				"navigationBarTitleText": "群聊",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/group/initiate_group/initiate_group",
+			"style": {
+				"navigationBarTitleText": "发起群聊",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/setting/index",
+			"style": {
+				"navigationBarTitleText": "设置",
 				"enablePullDownRefresh": false
 			}
 		}
@@ -85,7 +130,7 @@
 		"navigationBarBackgroundColor": "#ededed",
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "加载中...",
-		"backgroundColor": "#ededed",
+		"backgroundColorBottom": "#ededed",
 		// "enablePullDownRefresh": true,
 		"transparentTitle": "auto",
 		"app-plus": {

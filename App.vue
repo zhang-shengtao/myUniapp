@@ -1,6 +1,7 @@
 <script setup>
 	import uniApi from '@/utils/uniApi.js'
 	import user_pinia from "@/pinia/user.js"
+	const navHeader = uni.getSystemInfoSync().statusBarHeight + 'px'
 	onLaunch((options) => {
 		uniApi.networkStatusChange()
 		// const newUser = user_pinia()
@@ -9,7 +10,7 @@
 		// 		url: '/pages/login/login'
 		// 	})
 		// }
-
+		// uni.addInterceptor('')
 	})
 
 	onShow((options) => {
@@ -33,6 +34,10 @@
 
 <style lang="scss">
 	@import './static/my_icon.scss';
+
+	page {
+		background-color: "#ededed";
+	}
 
 	.flex {
 		display: flex;

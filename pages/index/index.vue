@@ -1,6 +1,6 @@
 <template>
 	<view class="noNet flex" v-if="!newUser.isConnected"><text class="noNet_red">!</text> 当前无法连接网络,可检查网络设置是否正常</view>
-	<navigator url="/pages/login/login" class="message_item flex" v-for="(item,i) in user_list" :key="i">
+	<navigator url="/pages/chat/chat" class="message_item flex" v-for="(item,i) in user_list" :key="i">
 		<view style="position: relative;">
 			<image class="image" :src="item.user_icon" mode="" />
 			<text class="message_num" :style="{padding:!item.is_group&&'4rpx'}">{{!item.is_group?item.num:''}}</text>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-	import Model from '@/components/Index_model/index.vue'
+	import Model from '@/components/RinghtModel/index.vue'
 	import user_pinia from "@/pinia/user.js"
 	const newUser = user_pinia()
 	const user_list = ref([{

@@ -2,14 +2,14 @@
 	<scroll-view scroll-y :scroll-into-view="scroll_id" style="height: 100%">
 		<view class="user_list" :id="index" v-for="(item,index) in user_list" :key="item.name + index">
 			<view class="tag item_tag" v-if="index != 'al'">{{filter(index)}}</view>
-			<view class="flex list_top" v-for="(items,index) in item" :key="item.name">
+			<view class="flex list_top" @click="user(items)" v-for="(items,index) in item" :key="item.name">
 				<image class="image" :src="items.user_icon" mode="" />
 				<text class="text">{{items.user_name}}</text>
 			</view>
 		</view>
 		<view class="footer">{{userTotal}}个朋友</view>
 	</scroll-view>
-	<view class="fixed_right" @touchstart="touchStart" @touchend="touchEnd" @touchmove.stop.prevent="touchMove">
+	<view class="fixed_right" @touchstart="touchStart" @touchend="scroll_id=''" @touchmove.stop.prevent="touchMove">
 		<view :class="['tag',scroll_id==item?'back':'']" :data-id="item" v-for="item in tagTotal" :key="item">
 			{{filter(item)}}
 			<view class="tagabs" v-if="scroll_id==item">{{filter(scroll_id)}}</view>
@@ -21,9 +21,10 @@
 </template>
 
 <script setup>
-	import Model from '@/components/Index_model/index.vue'
+	import Model from '@/components/RinghtModel/index.vue'
 	import {
-		onMounted
+		onMounted,
+		toRefs
 	} from "vue";
 	const scroll_id = ref('')
 	const fixed_right = {
@@ -125,8 +126,17 @@
 		scroll_id.value = e.target.id
 	}
 
-	function touchEnd() {
-		scroll_id.value = ''
+	function user(item) {
+		let url
+		if (item.user_name == '新的朋友') {
+			url = '/pages/add_user/add_user'
+		}
+		if (item.user_name == '群聊') {
+			url = '/pages/group/group'
+		}
+		if (url) uni.navigateTo({
+			url
+		})
 	}
 
 	function touchMove(e) {
@@ -139,13 +149,10 @@
 	onNavigationBarButtonTap((obj) => {
 		is_show_model.value = !is_show_model.value
 	})
-	// onload(() => {
 
-	// })
 	onHide(() => {
 		is_show_model.value = false
 	})
-
 
 	onMounted(() => {
 		uni.createSelectorQuery()

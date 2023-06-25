@@ -1,1 +1,0 @@
-"use strict";const e=require("../common/vendor.js"),{VITE_TOKEN_NAME:t}={VITE_TOKEN_NAME:"USER_TOEN",VITE_ROOT_DIR:"C:/Users/张升涛/Desktop/myUniapp",VITE_USER_NODE_ENV:"development",BASE_URL:"/",MODE:"development",DEV:!0,PROD:!1,SSR:!1},E=e.defineStore("user",{state:()=>({isConnected:!0,get token(){return e.index.getStorageSync(t)}}),actions:{}});exports.user_pinia=E;

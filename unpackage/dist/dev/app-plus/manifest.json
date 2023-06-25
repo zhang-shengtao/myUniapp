@@ -38,8 +38,16 @@
       "kernel": "WKWebview"
     },
     "usingComponents": true,
+    "softinputNavBar": "none",
     "nvueStyleCompiler": "uni-app",
     "compilerVersion": 3,
+    "safearea": {
+      "background": "#ffffff",
+      "backgroundDark": "#2f0508",
+      "bottom": {
+        "offset": "auto"
+      }
+    },
     "distribute": {
       "splashscreen": {
         "androidStyle": "default",
@@ -89,16 +97,10 @@
       "enable": false
     },
     "allowsInlineMediaPlayback": true,
-    "safearea": {
-      "background": "#F8F8F8",
-      "bottom": {
-        "offset": "auto"
-      }
-    },
     "uni-app": {
       "control": "uni-v3",
       "vueVersion": "3",
-      "compilerVersion": "3.7.11",
+      "compilerVersion": "3.8.6",
       "nvueCompiler": "uni-app",
       "renderer": "auto",
       "nvue": {
